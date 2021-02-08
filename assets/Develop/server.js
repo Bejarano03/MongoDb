@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const router = require("");
+const router = require("./routes/api.js");
 
 const PORT = preocess.env.PORT || 3000;
 
