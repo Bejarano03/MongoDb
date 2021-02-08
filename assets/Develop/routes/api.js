@@ -1,17 +1,19 @@
-const Workout = require("../models/workout");
+const Workout = require("../models/workout.js");
 const mongoose = require("mongoose");
 const express = require("express");
+const { db } = require("../models/workout.js");
 const router = express.Router();
 
-router.ports("/api/workouts", ({ body }, res ) => {
+router.post("/api/workouts", ({ body }, res ) => {
     console.log("PARAMS", body, params);
 
-    Workout.findOneAndUpdate(
-        { _id: params.id },
-        { $push: { exercises: body } },
-        { new: true }
-    )
+    
+});
+
+router.get("workouts", (req,res) => {
+    Workout.find({})
+    .limit(7)
     .then((dbWorkout) => {
-        res.json()
-    })
+        res.
+    });
 })
