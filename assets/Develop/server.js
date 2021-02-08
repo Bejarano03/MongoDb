@@ -1,6 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
-cosnt mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const router = require("");
 
 const PORT = preocess.env.PORT || 3000;
@@ -23,3 +23,14 @@ let db = moongoose.connect(
         useCreateIndex: true,
     }
 );
+
+
+// routes
+app.use(router);
+require("");
+
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}`);
+});
+
+module.exports = db;
