@@ -5,15 +5,14 @@ const { db } = require("../models/workout.js");
 const router = express.Router();
 
 router.post("/api/workouts", ({ body }, res ) => {
-    console.log("PARAMS", body, params);
-
+   
+    Workout.create({})
+    .then((dbWorkout) => {
+      res.json(dbWorkout);
+    })
+    .catch(({ message }) => {
+      console.log(message);
+    });
     
 });
 
-router.get("workouts", (req,res) => {
-    Workout.find({})
-    .limit(7)
-    .then((dbWorkout) => {
-        res.
-    });
-})

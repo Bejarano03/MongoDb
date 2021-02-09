@@ -3,7 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const router = require("./routes/api.js");
 
-const PORT = preocess.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -27,7 +27,7 @@ let db = moongoose.connect(
 
 // routes
 app.use(router);
-require("");
+require("./routes/html.js");
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
