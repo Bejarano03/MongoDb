@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-let db = moongoose.connect(
+let db = mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/workout",
     {
         useUnifiedTopology: true,
