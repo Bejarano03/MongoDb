@@ -1,4 +1,4 @@
-const express = require("express");
+const router = require("express").Router();
 const path = require("path");
 
 module.exports = function(app) {
