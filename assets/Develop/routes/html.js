@@ -4,8 +4,15 @@ const path = require("path");
 
 router.get("/exercise", (req, res) => {
 
-    req.sendFile( path.join(___dirname, "../public/exercise.html" ) );
+    res.sendFile( path.join( __dirname, "../public/exercise.html" ) );
 
-})
+});
+
+router.get("/stats", (req, res) => {
+
+    res.sendFile( path.join( __dirname, "../public/stats.html" ) );
+
+});
+
 
 module.exports = router; 
